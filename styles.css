@@ -1,8 +1,8 @@
-/* Reset some default styles */
-body, h1, p, button {
+/* Set the background color for the entire window */
+body {
+    background-color: #193622; /* Darker and less saturated background color for the window */
     margin: 0;
     padding: 0;
-    border: none;
 }
 
 /* Set default text color and background color for the container */
@@ -10,14 +10,14 @@ body, h1, p, button {
     text-align: center; /* Center the content horizontally */
     align-items: center;
     min-height: 100vh;
-    background-color: #264123;
+    background-color: #264123; /* Background color for the container */
     color: #e0dbb3; /* Text color for the content inside the container */
     max-width: 800px; /* Limit the width of the content container */
     margin: 0 auto; /* Center the container horizontally within the viewport */
 }
 
 h1 {
-    color: #333; /* You can adjust the color for headings if needed */
+    color: #4CAF50; /* Brighter color for the h1 element */
 }
 
 /* Style buttons */
