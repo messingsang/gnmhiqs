@@ -7,7 +7,6 @@ body {
 
 /* Set default text color and background color for the container */
 .container {
-    text-align: center; /* Center the content horizontally */
     align-items: center;
     min-height: 100vh;
     background-color: #264123; /* Background color for the container */
@@ -15,6 +14,21 @@ body {
     max-width: 800px; /* Limit the width of the content container */
     margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
     padding: 20px 30px; /* Add padding (top: 20px, right: 30px, bottom: 20px, left: 30px) */
+}
+
+.mobileApology {
+    color:#000000;
+    font-size:8px;
+    text-align: left;
+    background-color: #193622; /* Background color for the container */
+    color: #e0dbb3; /* Text color for the content inside the container */
+    max-width: 400px; /* Limit the width of the content container */
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+    padding: 20px 30px; /* Add padding (top: 20px, right: 30px, bottom: 20px, left: 30px) */
+}
+
+.logoImage {
+    text-align: center;
 }
 
 h1 {

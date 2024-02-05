@@ -7,33 +7,38 @@
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Reference to updated external CSS file -->
 </head>
 <body>
+    
     <div class="container"> <!-- Wrapping the content in a container div -->
         <h1>Welcome to Ganjananimon High IQ Society!</h1>
         <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
+
+        <div class="logoImage">
+            <img src="GNMHIQS.png" alt="Welcome Image">
+        </div>
 
         <h2>Confirm Your Age and Understanding</h2>
         <p>To ensure that our content is suitable for your audience, we kindly request that you confirm the following:</p>
         
         <button id="humanoidBtn">I am a Humanoid</button>
-        <button id="ageBtn">I am over the age of 21</button>
+        <button id="ageBtn">I am over the age of 21</button><br>
         <button id="cookieBtn">I accept cookies</button>
         <button id="privacyBtn">I have read and understood the privacy policy</button>
 
-        <div class="confirmation-buttons">
-            <img src="GNMHIQS.png" alt="Welcome Image">
-        </div>
+        
 
         <div id="confirmationMessage"></div>
         
         <!-- "Continue" button initially hidden -->
         <button id="continueBtn" style="display: none;">Continue (not yet functional)</button>
+        <div class="mobileApology">
+        <h1>Ganjananimon use computers!</h1>
+        <p>This website is not made for mobile devices. Please use a desktop browser.</p>
     </div>
+    </div>
+    
+
 
     <script>
-
-        window.onload = detectMobileDevice;
-
-
         const humanoidBtn = document.getElementById('humanoidBtn');
         const ageBtn = document.getElementById('ageBtn');
         const cookieBtn = document.getElementById('cookieBtn');
@@ -86,13 +91,7 @@
                 continueBtn.style.display = 'block'; // Display the "Continue" button
             }
         }
-        function detectMobileDevice() {
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            if (isMobile) {
-                const messageContainer = document.getElementById('container');
-                messageContainer.innerHTML = '<h1>Ganjananimon High IQ Society</h1><p>This website is not made for mobile browsers. Please use a desktop browser.</p>';
-            }
-        }
+
     </script>
 </body>
 </html>
