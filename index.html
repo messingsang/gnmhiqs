@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to [Your Website Name]</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Welcome to [Your Website Name]</h1>
@@ -21,16 +20,19 @@
         <img src="GNMHIQS.png" alt="Welcome Image">
     </div>
 
+    <div id="confirmationMessage"></div>
+
     <script>
         const humanoidBtn = document.getElementById('humanoidBtn');
         const ageBtn = document.getElementById('ageBtn');
+        const confirmationMessage = document.getElementById('confirmationMessage');
 
         humanoidBtn.addEventListener('click', () => {
-            alert('Thank you for confirming your humanity!');
+            confirmationMessage.innerHTML = 'Thank you for confirming your humanity!';
         });
 
         ageBtn.addEventListener('click', () => {
-            alert('Thank you for confirming you are over 21. Enjoy our content responsibly!');
+            confirmationMessage.innerHTML = 'Thank you for confirming you are over 21. Enjoy our content responsibly!';
         });
     </script>
 </body>
