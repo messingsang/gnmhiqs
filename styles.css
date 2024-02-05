@@ -31,6 +31,27 @@ body {
     text-align: center;
 }
 
+.confirmationBtns {
+    text-align: center;
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+    padding: 20px 30px; /* Add padding (top: 20px, right: 30px, bottom: 20px, left: 30px) */
+}
+
+.confPlaceholder {
+    min-height: 100px;
+    max-width: 460px;
+    text-align: left;
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+    padding: 20px 30px; /* Add padding (top: 20px, right: 30px, bottom: 20px, left: 30px) */
+}
+
+.btnPlaceholder {
+    min-height: 60px;
+    text-align: center;
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+    padding: 20px 30px; /* Add padding (top: 20px, right: 30px, bottom: 20px, left: 30px) */
+}
+
 h1 {
     color: #4CAF50; /* Brighter color for the h1 element */
 }

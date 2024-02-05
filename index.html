@@ -19,21 +19,32 @@
         <h2>Confirm Your Age and Understanding</h2>
         <p>To ensure that our content is suitable for your audience, we kindly request that you confirm the following:</p>
         
+
+        <div class="confirmationBtns">
         <button id="humanoidBtn">I am a Humanoid</button>
         <button id="ageBtn">I am over the age of 21</button><br>
         <button id="cookieBtn">I accept cookies</button>
         <button id="privacyBtn">I have read and understood the privacy policy</button>
-
+        </div>
         
+        <div class="confPlaceholder">
+        <div id="confirmationMsgs"></div>
+    </div>
 
-        <div id="confirmationMessage"></div>
-        
+
+        <div class= "btnPlaceholder">    
+        <div id="continueDiv" style="display: none;">
         <!-- "Continue" button initially hidden -->
-        <button id="continueBtn" style="display: none;">Continue (not yet functional)</button>
+        <button id="continueBtn">Continue (not yet functional)</button>
+        </div>
+    </div>
+
         <div class="mobileApology">
         <h1>Ganjananimon use computers!</h1>
         <p>This website is not made for mobile devices. Please use a desktop browser.</p>
-    </div>
+        </div>
+
+
     </div>
     
 
@@ -43,7 +54,7 @@
         const ageBtn = document.getElementById('ageBtn');
         const cookieBtn = document.getElementById('cookieBtn');
         const privacyBtn = document.getElementById('privacyBtn');
-        const confirmationMessage = document.getElementById('confirmationMessage');
+        const confirmationMessage = document.getElementById('confirmationMsgs');
         const continueBtn = document.getElementById('continueBtn');
 
         // Initialize flags to track button clicks
@@ -88,7 +99,7 @@
         function checkConfirmation() {
             if (humanoidClicked && ageClicked && cookieClicked && privacyClicked) {
                 confirmationMessage.innerHTML += 'Enjoy our content responsibly!<br>';
-                continueBtn.style.display = 'block'; // Display the "Continue" button
+                continueDiv.style.display = 'block'; // Display the "Continue" button
             }
         }
 
