@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to [Your Website Name]</title>
+    <title>Welcome to Ganjananimon High IQ Society!</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Reference to external CSS file -->
 </head>
 <body>
-    <h1>Welcome to Ganjananimon High IQ Society!</h1>
+    <h1>Welcome to Ganjananimon High IQ Society</h1>
     <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
 
     <h2>Confirm Your Age</h2>
@@ -32,19 +32,25 @@
         let ageClicked = false;
 
         humanoidBtn.addEventListener('click', () => {
-            humanoidClicked = true; // Set the flag to true when "I am a Humanoid" is clicked
-            checkConfirmation(); // Check if both buttons have been clicked
+            if (!humanoidClicked) {
+                confirmationMessage.innerHTML += 'Thank you for confirming your humanity!<br>';
+                humanoidClicked = true; // Set the flag to true when "I am a Humanoid" is clicked
+                checkConfirmation(); // Check if both prerequisites are met
+            }
         });
 
         ageBtn.addEventListener('click', () => {
-            ageClicked = true; // Set the flag to true when "I am over 21" is clicked
-            checkConfirmation(); // Check if both buttons have been clicked
+            if (!ageClicked) {
+                confirmationMessage.innerHTML += 'Thank you for confirming you are over 21.<br>';
+                ageClicked = true; // Set the flag to true when "I am over 21" is clicked
+                checkConfirmation(); // Check if both prerequisites are met
+            }
         });
 
-        // Function to check if both buttons have been clicked
+        // Function to check if both prerequisites are met and show final message
         function checkConfirmation() {
             if (humanoidClicked && ageClicked) {
-                confirmationMessage.innerHTML = 'Enjoy our content responsibly!';
+                confirmationMessage.innerHTML += 'Enjoy our content responsibly!';
             }
         }
     </script>
