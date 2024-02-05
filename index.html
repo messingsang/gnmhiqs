@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to [Your Website Name]</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <h1>Welcome to [Your Website Name]</h1>
+    <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
+
+    <h2>Confirm Your Age</h2>
+    <p>To ensure that our content is suitable for our audience, we kindly request that you confirm you are:</p>
+    
+    <button id="humanoidBtn">I am a Humanoid</button>
+    <button id="ageBtn">I am over 21</button>
+
+    <div class="confirmation-buttons">
+        <img src="https://raw.githubusercontent.com/YourUsername/YourRepository/main/GNMHIQS.png" alt="Welcome Image">
+    </div>
+
+    <script>
+        const humanoidBtn = document.getElementById('humanoidBtn');
+        const ageBtn = document.getElementById('ageBtn');
+
+        humanoidBtn.addEventListener('click', () => {
+            alert('Thank you for confirming your humanity!');
+        });
+
+        ageBtn.addEventListener('click', () => {
+            alert('Thank you for confirming you are over 21. Enjoy our content responsibly!');
+        });
+    </script>
+</body>
+</html>
