@@ -13,7 +13,7 @@
         <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
 
         <div class="logoImage">
-            <img src="GNMHIQS.png" alt="Welcome Image">
+            <img src="GNMHIQS.png" alt="Welcome Image" style="max-width: 100%; height: auto;">
         </div>
 
         <h2>Confirm Your Age and Understanding</h2>
@@ -39,11 +39,13 @@
         </div>
     </div>
 
+
+<!--
         <div class="mobileApology">
         <h1>Ganjananimon use computers!</h1>
         <p>This website is not made for mobile devices. Please use a desktop browser.</p>
         </div>
-
+-->
 
     </div>
     
@@ -81,7 +83,7 @@
 
         cookieBtn.addEventListener('click', () => {
             if (!cookieClicked) {
-                confirmationMessage.innerHTML += 'Thanks for accepting cookies! (we do not collect data)<br>';
+                confirmationMessage.innerHTML += 'Thanks for accepting cookies! (we do not collect data as of yet)<br>';
                 cookieClicked = true; 
                 checkConfirmation(); // Check if both prerequisites are met
             }
