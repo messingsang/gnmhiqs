@@ -11,11 +11,13 @@
         <h1>Welcome to Ganjananimon High IQ Society!</h1>
         <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
 
-        <h2>Confirm Your Age</h2>
-        <p>To ensure that our content is suitable for our audience, we kindly request that you confirm you are:</p>
+        <h2>Confirm Your Age and Understanding</h2>
+        <p>To ensure that our content is suitable for your audience, we kindly request that you confirm the following:</p>
         
         <button id="humanoidBtn">I am a Humanoid</button>
-        <button id="ageBtn">I am over 21</button>
+        <button id="ageBtn">I am over the age of 21</button>
+        <button id="cookieBtn">I accept cookies</button>
+        <button id="privacyBtn">I have read and understood the privacy policy</button>
 
         <div class="confirmation-buttons">
             <img src="GNMHIQS.png" alt="Welcome Image">
@@ -30,12 +32,16 @@
     <script>
         const humanoidBtn = document.getElementById('humanoidBtn');
         const ageBtn = document.getElementById('ageBtn');
+        const cookieBtn = document.getElementById('cookieBtn');
+        const privacyBtn = document.getElementById('privacyBtn');
         const confirmationMessage = document.getElementById('confirmationMessage');
         const continueBtn = document.getElementById('continueBtn');
 
         // Initialize flags to track button clicks
         let humanoidClicked = false;
         let ageClicked = false;
+        let cookieClicked = false;
+        let privacyClicked = false;
 
         humanoidBtn.addEventListener('click', () => {
             if (!humanoidClicked) {
@@ -53,9 +59,25 @@
             }
         });
 
+        cookieBtn.addEventListener('click', () => {
+            if (!cookieClicked) {
+                confirmationMessage.innerHTML += 'Thanks for accepting cookies! (we do not collect data)<br>';
+                cookieClicked = true; 
+                checkConfirmation(); // Check if both prerequisites are met
+            }
+        });
+
+        privacyBtn.addEventListener('click', () => {
+            if (!privacyClicked) {
+                confirmationMessage.innerHTML += 'Wow! Thanks for actually reading our privacy policy! Well done.<br>';
+                privacyClicked = true; 
+                checkConfirmation(); // Check if both prerequisites are met
+            }
+        });
+
         // Function to check if both prerequisites are met and show final message and "Continue" button
         function checkConfirmation() {
-            if (humanoidClicked && ageClicked) {
+            if (humanoidClicked && ageClicked && cookieClicked && privacyClicked) {
                 confirmationMessage.innerHTML += 'Enjoy our content responsibly!<br>';
                 continueBtn.style.display = 'block'; // Display the "Continue" button
             }
