@@ -1,60 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganjananimon High IQ Society</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Reference to updated external CSS file -->
-</head>
-<body>
-    <div class="container"> <!-- Wrapping the content in a container div -->
-        <h1>Welcome to Ganjananimon High IQ Society!</h1>
-        <p>We're excited to have you here, where we offer engaging and fun experiences for those who are twenty-one years of age and older.</p>
+/* Set the background color for the entire window */
+body {
+    background-color: #193622; /* Darker and less saturated background color for the window */
+    margin: 0;
+    padding: 0;
+}
 
-        <h2>Confirm Your Age</h2>
-        <p>To ensure that our content is suitable for our audience, we kindly request that you confirm you are:</p>
-        
-        <button id="humanoidBtn">I am a Humanoid</button>
-        <button id="ageBtn">I am over 21</button>
+/* Set default text color and background color for the container */
+.container {
+    text-align: center; /* Center the content horizontally */
+    align-items: center;
+    min-height: 100vh;
+    background-color: #264123; /* Background color for the container */
+    color: #e0dbb3; /* Text color for the content inside the container */
+    max-width: 800px; /* Limit the width of the content container */
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+}
 
-        <div class="confirmation-buttons">
-            <img src="GNMHIQS.png" alt="Welcome Image">
-        </div>
+h1 {
+    color: #4CAF50; /* Brighter color for the h1 element */
+}
 
-        <div id="confirmationMessage"></div>
-    </div>
+/* Style buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
 
-    <script>
-        const humanoidBtn = document.getElementById('humanoidBtn');
-        const ageBtn = document.getElementById('ageBtn');
-        const confirmationMessage = document.getElementById('confirmationMessage');
+button:hover {
+    background-color: #45a049;
+}
 
-        // Initialize flags to track button clicks
-        let humanoidClicked = false;
-        let ageClicked = false;
-
-        humanoidBtn.addEventListener('click', () => {
-            if (!humanoidClicked) {
-                confirmationMessage.innerHTML += 'Thank you for confirming your humanity!<br>';
-                humanoidClicked = true; // Set the flag to true when "I am a Humanoid" is clicked
-                checkConfirmation(); // Check if both prerequisites are met
-            }
-        });
-
-        ageBtn.addEventListener('click', () => {
-            if (!ageClicked) {
-                confirmationMessage.innerHTML += 'Thank you for confirming you are over 21.<br>';
-                ageClicked = true; // Set the flag to true when "I am over 21" is clicked
-                checkConfirmation(); // Check if both prerequisites are met
-            }
-        });
-
-        // Function to check if both prerequisites are met and show final message
-        function checkConfirmation() {
-            if (humanoidClicked && ageClicked) {
-                confirmationMessage.innerHTML += 'Enjoy our content responsibly!';
-            }
-        }
-    </script>
-</body>
-</html>
+/* Additional styling as needed for your specific elements */
