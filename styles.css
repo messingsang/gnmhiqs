@@ -13,6 +13,8 @@ body, h1, p, button {
     min-height: 100vh;
     background-color: #264123;
     color: #e0dbb3; /* Text color for the content inside the container */
+    max-width: 800px; /* Limit the width of the content container */
+    margin: 0 auto; /* Center the container horizontally within the viewport */
 }
 
 h1 {
