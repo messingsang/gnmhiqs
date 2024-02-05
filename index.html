@@ -30,6 +30,10 @@
     </div>
 
     <script>
+
+        window.onload = detectMobileDevice;
+
+
         const humanoidBtn = document.getElementById('humanoidBtn');
         const ageBtn = document.getElementById('ageBtn');
         const cookieBtn = document.getElementById('cookieBtn');
@@ -80,6 +84,13 @@
             if (humanoidClicked && ageClicked && cookieClicked && privacyClicked) {
                 confirmationMessage.innerHTML += 'Enjoy our content responsibly!<br>';
                 continueBtn.style.display = 'block'; // Display the "Continue" button
+            }
+        }
+        function detectMobileDevice() {
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                const messageContainer = document.getElementById('container');
+                messageContainer.innerHTML = '<h1>Ganjananimon High IQ Society</h1><p>This website is not made for mobile browsers. Please use a desktop browser.</p>';
             }
         }
     </script>
