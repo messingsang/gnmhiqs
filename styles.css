@@ -14,6 +14,7 @@ body {
     color: #e0dbb3; /* Text color for the content inside the container */
     max-width: 800px; /* Limit the width of the content container */
     margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
+    padding: 0 20px; /* Add padding to the left and right sides of the container */
 }
 
 h1 {
