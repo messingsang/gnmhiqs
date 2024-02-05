@@ -13,7 +13,7 @@ body {
     background-color: #264123; /* Background color for the container */
     color: #e0dbb3; /* Text color for the content inside the container */
     max-width: 800px; /* Limit the width of the content container */
-    margin: 0 auto; /* Center the container horizontally within the viewport */
+    margin: 20px auto; /* Add margin to the container (top and bottom: 20px, left and right: auto) */
 }
 
 h1 {
