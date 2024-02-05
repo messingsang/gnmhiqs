@@ -5,11 +5,14 @@ body, h1, p, button {
     border: none;
 }
 
-/* Set default text color and background color */
-body {
-    font-family: Arial, sans-serif;
-    color: #e0dbb3;
+/* Set default text color and background color for the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-color: #264123;
+    color: #e0dbb3; /* Text color for the content inside the container */
 }
 
 h1 {
