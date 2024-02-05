@@ -8,7 +8,7 @@ body, h1, p, button {
 /* Set default text color and background color for the container */
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center content horizontally */
     align-items: center;
     min-height: 100vh;
     background-color: #264123;
