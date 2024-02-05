@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganjananimon High IQ Society</title>
+    <title>GNMHIQS</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Reference to updated external CSS file -->
 </head>
 <body>
@@ -13,7 +13,7 @@
 
         <h2>Confirm Your Age</h2>
         <p>To ensure that our content is suitable for our audience, we kindly request that you confirm you are:</p>
-
+        
         <button id="humanoidBtn">I am a Humanoid</button>
         <button id="ageBtn">I am over 21</button>
 
@@ -22,12 +22,16 @@
         </div>
 
         <div id="confirmationMessage"></div>
+        
+        <!-- "Continue" button initially hidden -->
+        <button id="continueBtn" style="display: none;">Continue</button>
     </div>
 
     <script>
         const humanoidBtn = document.getElementById('humanoidBtn');
         const ageBtn = document.getElementById('ageBtn');
         const confirmationMessage = document.getElementById('confirmationMessage');
+        const continueBtn = document.getElementById('continueBtn');
 
         // Initialize flags to track button clicks
         let humanoidClicked = false;
@@ -49,10 +53,11 @@
             }
         });
 
-        // Function to check if both prerequisites are met and show final message
+        // Function to check if both prerequisites are met and show final message and "Continue" button
         function checkConfirmation() {
             if (humanoidClicked && ageClicked) {
-                confirmationMessage.innerHTML += 'Enjoy our content responsibly!';
+                confirmationMessage.innerHTML += 'Enjoy our content responsibly!<br>';
+                continueBtn.style.display = 'block'; // Display the "Continue" button
             }
         }
     </script>
